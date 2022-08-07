@@ -16,7 +16,7 @@ async function main() {
   // Creating the transaction object
   const tx = {
     from: signer.address,
-    to: "0xeAD9C93b79Ae7C1591b1FB5323BD777E86e150d4",
+    to: "0x1E2eBeBB3348B1FeFC29239c20Df1c78668180Cc", //Ronan's Goerli Test Wallet Hot June 2022
     value: web3.utils.toWei("0.001"),
   };
   // Assigning the right amount of gas
