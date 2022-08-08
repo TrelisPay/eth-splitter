@@ -3,7 +3,7 @@ const Web3 = require("web3");
 // Loading the contract ABI
 // (the results of a previous compilation step)
 const fs = require("fs");
-const { abi } = JSON.parse(fs.readFileSync("Demo.json"));
+const { abi } = JSON.parse(fs.readFileSync("EtherSplitter.json"));
 
 async function main() {
   // Configuring the connection to an Ethereum node
@@ -24,12 +24,12 @@ async function main() {
     // Replace this with the address of your deployed contract
     process.env.DEMO_CONTRACT
   );
-  // Issuing a transaction that calls the `echo` method
-  const tx = contract.methods.echo("Yowdy, ya big messer!");
+  // Issuing a transaction that calls the `splitEther` method
+  const tx = contract.methods.splitEther();
   const receipt = await tx
     .send({
       from: signer.address,
-      gas: await tx.estimateGas(),
+      gas: await tx.estimateGas()
     })
     .once("transactionHash", (txhash) => {
       console.log(`Mining transaction ...`);
