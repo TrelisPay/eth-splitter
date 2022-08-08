@@ -1,5 +1,3 @@
-pragma solidity 0.6;
-
 contract Demo {
     event Echo(string message);
 

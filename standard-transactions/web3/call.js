@@ -25,7 +25,7 @@ async function main() {
     process.env.DEMO_CONTRACT
   );
   // Issuing a transaction that calls the `echo` method
-  const tx = contract.methods.echo("Hello, world!");
+  const tx = contract.methods.echo("Yowdy, ya big messer!");
   const receipt = await tx
     .send({
       from: signer.address,
